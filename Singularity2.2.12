@@ -1,0 +1,10 @@
+Bootstrap: docker
+From: ubuntu:trusty
+
+%post
+	apt update
+	apt -y install software-properties-common
+	add-apt-repository -y ppa:bibi-help/bibitools
+	apt update
+	apt -y install pkiss
+	locale-gen $LANG
